@@ -1,0 +1,20 @@
+
+.my-reduce-odds-page {
+  :deep(.el-tabs__header ) {
+    border-bottom: 1px solid var(--common-card-bg-color);
+    padding-bottom: var(--vertical-space);
+    margin-bottom: var(--vertical-space);
+  }
+  :deep(.el-tabs__nav-wrap) {
+    --el-tabs-header-height: 34px;
+    &::after {
+      content: none;
+    }
+    .el-tabs__active-bar {
+      display: none;
+    }
+    .el-tabs__item {
+      padding-inline: 16px;
+    }
+  }
+}

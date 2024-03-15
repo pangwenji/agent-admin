@@ -1,0 +1,127 @@
+:deep(.el-table) {
+  border-radius: 8px;
+  border: 1px solid #4847601a;
+  .el-table__cell {
+    color: #424251;
+    font-weight: 400;
+  }
+  .el-table__header {
+    thead tr th {
+      background: #c2e8ff33;
+    }
+  }
+  .el-table__body {
+    .el-table__cell {
+      color: #5a577d;
+    }
+    tbody tr:nth-last-child(1) {
+      .el-table__cell {
+        color: #5a577d;
+        border-bottom: none !important;
+      }
+    }
+  }
+}
+
+:deep(.el-table__inner-wrapper::after),
+:deep(.el-table__inner-wrapper::before),
+:deep(.el-table--border::before),
+:deep(.el-table--border::after),
+:deep(.el-table__border-left-patch) {
+  width: 0 !important;
+  height: 0 !important;
+  background: none !important;
+  display: none !important;
+}
+
+// 分页
+.el-pagination {
+  display: flex;
+  justify-content: flex-end;
+  // margin: 20px 0 6px;
+  box-sizing: border-box;
+
+  :deep(.btn-prev),
+  :deep(.btn-next) {
+    height: 28px;
+    border: 1px solid #48476047;
+    background: none !important;
+    border-radius: 4px;
+
+    .el-icon {
+      color: #484760;
+      font-size: 16px;
+    }
+  }
+
+  :deep(.el-pager) {
+    li {
+      height: 28px;
+      border: 1px solid #48476047;
+      background: none;
+      color: #484760;
+      font-family: Microsoft YaHei UI;
+      font-size: 13px;
+      border-radius: 4px;
+
+      &.is-active {
+        color: #fff;
+        background: #484760;
+        font-weight: 500;
+      }
+
+      &.more {
+        font-size: 16px;
+      }
+    }
+  }
+  :deep(.el-pagination__sizes) {
+    .el-select .el-input {
+      width: 90px;
+    }
+    .el-input__wrapper {
+      border: 1px solid #48476047;
+      border-radius: 4px;
+      box-shadow: none !important;
+      padding: 0 5px;
+      box-sizing: border-box;
+      &.is-focus {
+        box-shadow: none !important;
+      }
+
+      .el-input__inner {
+        width: 60px;
+        height: 28px;
+        font-family: 'Microsoft YaHei UI';
+        font-size: 12px;
+        color: #5a577d;
+        flex-grow: 0;
+      }
+      .el-input__suffix-inner > :first-child {
+        margin-left: 2px;
+      }
+    }
+  }
+  :deep(.el-pagination__jump) {
+    .el-input__wrapper {
+      padding: 0 2px;
+      box-shadow: none !important;
+      &.is-focus {
+        box-shadow: none !important;
+      }
+    }
+    .el-input {
+      width: 32px;
+    }
+    .el-input__inner {
+      width: 32px;
+      height: 28px;
+      font-family: 'Microsoft YaHei UI';
+      font-size: 12px;
+      color: #5a577d;
+      flex-grow: 0;
+      border-radius: 4px;
+      border: 1px solid #48476047;
+    }
+  }
+}

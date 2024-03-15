@@ -1,0 +1,35 @@
+:deep(.el-table) {
+  border-radius: 8px;
+  border: 1px solid #4847601a;
+  .el-table__cell {
+    color: #424251;
+    font-weight: 400;
+  }
+  .el-table__header {
+    thead tr th {
+      background: #c2e8ff33;
+    }
+  }
+  .el-table__body {
+    .el-table__cell {
+      color: #5a577d;
+    }
+    tbody tr:nth-last-child(1) {
+      .el-table__cell {
+        color: #5a577d;
+        border-bottom: none !important;
+      }
+    }
+  }
+}
+
+:deep(.el-table__inner-wrapper::after),
+:deep(.el-table__inner-wrapper::before),
+:deep(.el-table--border::before),
+:deep(.el-table--border::after),
+:deep(.el-table__border-left-patch) {
+  width: 0 !important;
+  height: 0 !important;
+  background: none !important;
+  display: none !important;
+}

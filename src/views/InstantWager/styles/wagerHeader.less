@@ -1,0 +1,84 @@
+
+@import url('@/styles/mixins.less');
+.wager-header {
+  color: var(--dark-text-color);
+  --common-input-height: 28px;
+  :deep(.el-input__wrapper) {
+    --el-input-height: var(--common-input-height);
+  }
+  :deep(.el-button) {
+    height: var(--common-input-height);
+    line-height: var(--common-input-height);
+    padding-inline: 5.5px;
+  }
+  :deep(.el-radio-button__inner) {
+    height: var(--common-input-height);
+  }
+}
+.wager-header-line {
+  padding-block: var(--header-v-space);
+}
+.divider {
+  border-bottom: 1px solid rgba(72, 71, 96, 0.05);
+}
+.wager-header-first {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-top: 0;
+  .divider();
+}
+.lottery-selector {
+  font-size: var(--el-font-size-base);
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.lottery-periods {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: var(--el-font-size-base);
+  .divider();
+}
+.lottery-current,
+.lottery-current-status,
+.lottery-last,
+.draw-result {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.lottery-current-status {
+  :deep(.el-statistic) {
+    --el-statistic-content-color: var(--el-color-error);
+    .el-statistic__content {
+      font-weight: 700;
+      font-size: inherit;
+    }
+  }
+}
+.lottery-last {
+  .period-num {
+    font-weight: 700;
+    color: var(--el-color-error);
+  }
+}
+.handicap-radio {
+  :deep(.el-radio-button__inner) {
+    padding-inline: 8px;
+  }
+}
+.lottery-refresh {
+  .refresh-selector {
+    box-sizing: content-box;
+    :deep(.el-input) {
+      .el-input__inner {
+        width: 3em;
+      }
+    }
+  }
+}

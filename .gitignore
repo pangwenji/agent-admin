@@ -1,0 +1,21 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+/dist*
+*-lock.*
+pnpm-debug
+/.idea/.gitignore
+/.idea/vcs.xml
+/.idea/prettier.xml
+/.idea/modules.xml
+/.idea/watcherTasks.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/agent-admin.iml
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/codeStyles/Project.xml
+/.idea/shelf/Uncommitted_changes_before_Update_at_13_11_23,_5_08 pm_[Changes]/shelved.patch
+/.idea/shelf/Uncommitted_changes_before_Update_at_13_11_23__5_08pm__Changes_.xml
+/.idea/workspace.xml
+/.idea/shelf/Uncommitted_changes_before_Update_at_13_11_23,_5_08 pm_[Changes]/shelved.patch

@@ -1,0 +1,75 @@
+@import url('@/styles/mixins.less');
+.my-table {
+  &.my-table--shadow {
+   > .my-table__inner {
+      padding: 8px 9px;
+      background-color: var(--common-card-bg-color);
+    }
+    .my-table__title {
+      padding-block: 13px;
+      color: var(--dark-text-color);
+    }
+  }
+  :deep(.el-table) {
+    .custom-table();
+  }
+}
+
+.el-pagination {
+  --pagination-h: 29px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 6px;
+  box-sizing: border-box;
+  :deep(.btn-prev),
+  :deep(.btn-next) {
+    height: var(--pagination-h);
+    border: 1px solid #48476047;
+    background: none !important;
+    border-radius: 4px;
+
+    .el-icon {
+      color: #484760;
+      font-size: 16px;
+    }
+  }
+  :deep(.btn-next) {
+    margin-left: 10px;
+  }
+  :deep(.el-pager) {
+    li {
+      height: var(--pagination-h);
+      border: 1px solid #48476047;
+      background: none;
+      color: #484760;
+      font-family: Microsoft YaHei UI;
+      font-size: 13px;
+      border-radius: 4px;
+      margin-left: 10px;
+      &.is-active {
+        color: #fff;
+        background: #484760;
+        font-weight: 500;
+      }
+
+      &.more {
+        font-size: 16px;
+      }
+    }
+  }
+
+  :deep(.el-pagination__total) {
+    border: 1px solid #48476047;
+    min-width: 70px;
+    height: var(--pagination-h);
+    padding: 0 12px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #484760;
+    font-family: Microsoft YaHei UI;
+    font-size: 12px;
+  }
+}
